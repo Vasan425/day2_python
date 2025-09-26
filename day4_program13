@@ -1,0 +1,76 @@
+Write a program to execute the Pattern.
+
+Input Format
+
+Input consists single Integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the Pattern.
+
+Sample Input 0
+
+3
+Sample Output 0
+
+  *
+ * *
+*   *
+ * *
+  *
+Sample Input 1
+
+5
+Sample Output 1
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+Sample Input 2
+
+8
+Sample Output 2
+
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *
+
+  code
+
+  n = int(input())
+
+total_rows = 2 * n - 1
+
+for i in range(1, total_rows + 1):
+    if i <= n:
+        row = i
+    else:
+        row = total_rows - i + 1
+    print(' ' * (n - row), end='')
+    
+    if row == 1:
+        print('*')
+    else:
+        print('*' + ' ' * (2 * row - 3) + '*')
